@@ -1,0 +1,311 @@
+@import "_normalize.scss";
+
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 900;
+	src: url("../fonts/Montserrat-Black.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 700;
+	src: url("../fonts/Montserrat-Bold.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 600;
+	src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 400;
+	src: url("../fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+	font-family: "Roboto";
+	font-weight: 400;
+	src: url("../fonts/Roboto-Regular.ttf");
+}
+
+$yellow: #f2c94c;
+$gray: #333333;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Montserrat", sans-serif;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 30px;
+
+	@media screen and (max-width: 1200px) {
+		max-width: 960px;
+	}
+	@media screen and (max-width: 576px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.digital {
+	position: relative;
+	overflow: hidden;
+	&::before {
+		content: "стабильный рынок";
+		position: absolute;
+		top: 167px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-weight: 700;
+		font-size: 144px;
+		line-height: 176px;
+		text-transform: uppercase;
+		color: rgba(0, 0, 0, 0.04);
+		@media screen and (max-width: 1200px) {
+			font-size: 100px;
+		}
+		@media screen and (max-width: 992px) {
+			top: 193px;
+			font-size: 64px;
+			line-height: 78px;
+		}
+		@media screen and (max-width: 576px) {
+			top: 193px;
+			left: -26px;
+			font-size: 64px;
+			line-height: 78px;
+		}
+	}
+
+	&__container {
+		padding-top: 170px;
+		padding-bottom: 176px;
+		display: flex;
+		justify-content: center;
+		position: relative;
+		@media screen and (max-width: 1200px) {
+			justify-content: space-between;
+		}
+		@media screen and (max-width: 992px) {
+			padding-top: 100px;
+			padding-bottom: 106px;
+		}
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+			align-items: center;
+		}
+		@media screen and (max-width: 576px) {
+			padding-top: 54px;
+			padding-bottom: 37px;
+		}
+	}
+
+	&__title {
+		margin-right: 88px;
+		max-width: 595px;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 44px;
+		text-transform: uppercase;
+		color: $gray;
+		& span {
+			color: $yellow;
+		}
+		@media screen and (max-width: 1200px) {
+			max-width: 400px;
+			font-size: 30px;
+		}
+		@media screen and (max-width: 768px) {
+			margin-right: 0;
+		}
+		@media screen and (max-width: 576px) {
+			font-size: 24px;
+			line-height: 29px;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 339px;
+		left: -107px;
+		z-index: 100;
+		object-fit: cover;
+
+		@media screen and (max-width: 1420px) {
+			left: 0;
+		}
+		@media screen and (max-width: 1200px) {
+			top: 380px;
+		}
+		@media screen and (max-width: 992px) {
+			top: 300px;
+			left: 30px;
+		}
+		@media screen and (max-width: 768px) {
+			position: static;
+		}
+	}
+
+	&__content {
+		width: 457px;
+		@media screen and (max-width: 1200px) {
+			width: 400px;
+		}
+		@media screen and (max-width: 768px) {
+			width: 500px;
+		}
+		@media screen and (max-width: 576px) {
+			margin-top: -70px;
+			width: auto;
+		}
+	}
+
+	&__plus {
+		margin-top: -10px;
+		margin-bottom: 11px;
+		@media screen and (max-width: 576px) {
+			margin-bottom: 26px;
+		}
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 29px;
+		&.semi-bold {
+			font-weight: 600;
+		}
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		@media screen and (max-width: 1200px) {
+			font-size: 20px;
+		}
+		@media screen and (max-width: 1200px) {
+			font-size: 16px;
+		}
+	}
+}
+
+.plus {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 75px;
+	color: $yellow;
+}
+.services {
+	position: relative;
+	background: url("../img/bg.webp") no-repeat center center;
+	background-size: cover;
+	overflow: hidden;
+	&::before {
+		content: "";
+		overflow: none;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgba(51, 51, 51, 0.85);
+	}
+
+	&__container {
+		position: relative;
+		padding-top: 145px;
+		padding-bottom: 119px;
+		&::before {
+			content: "ремонт квартир";
+			position: absolute;
+			top: 95px;
+			left: -702px;
+			z-index: 0;
+			width: 2970px;
+			text-transform: uppercase;
+			font-weight: 800;
+			font-size: 288px;
+			line-height: 351px;
+			color: transparent;
+			-webkit-text-stroke-width: 4px;
+			-webkit-text-stroke-color: rgba(255, 255, 255, 0.06);
+			@media screen and (max-width: 1200px) {
+				left: -300px;
+				font-size: 150px;
+			}
+			@media screen and (max-width: 992px) {
+				font-size: 120px;
+			}		
+			@media screen and (max-width: 576px) {
+				left: -7px;
+				top: 92px;
+				width: auto;
+				font-size: 72px;
+				line-height: 88px;
+			}
+		}
+		@media screen and (max-width: 768px) {
+			padding-top: 32px;
+			padding-bottom: 78px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 51px;
+		width: 653px;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 59px;
+		text-transform: uppercase;
+		color: #fff;
+		& span {
+			color: $yellow;
+		}
+		@media screen and (max-width: 992px) {
+			font-size: 40px;
+		}
+		@media screen and (max-width: 768px) {
+			width: auto;
+		}
+		@media screen and (max-width: 576px) {
+			font-size: 24px;
+			line-height: 29px;
+			margin-bottom: 35px;
+		}
+	}
+
+	&__list {
+	}
+
+	&__item {
+		
+		& img {
+			position: relative;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__plus {
+		position: absolute;
+		top: 0;
+		right: calc(50% - 115px);
+		z-index: 100;
+	}
+}
+
+.swiper-slide {
+	text-align: center;
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 22px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #fff;
+	}
+}
