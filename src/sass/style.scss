@@ -287,6 +287,9 @@ html {
 		& img {
 			position: relative;
 			margin-bottom: 16px;
+			@media screen and (max-width: 576px) {
+				border: 4px solid #4F4F4F;
+			}
 		}
 	}
 
